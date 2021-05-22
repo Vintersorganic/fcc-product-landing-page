@@ -1,0 +1,397 @@
+/*CSS RESET https://piccalil.li/blog/a-modern-css-reset/ */ 
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    background-color: #7798AB;
+    position: relative;
+}
+/* Navbar */
+header {
+    width: 100%;
+    height: 100px;
+    top: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+    background-color: hsl(188, 40%, 4%);
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999;
+    
+}
+
+header .burger-menu {
+    color: hsl(42, 50%, 96%);
+    margin-right: 30px;
+    font-size: 2em;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    display: none;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: hsl(42, 50%, 96%);
+}
+
+/*Main*/ 
+
+
+.main {
+    position: relative;
+    color: #FAF7F0;
+    margin-top: 140px;
+}
+
+/*Subscription*/
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 400;
+}
+
+.subscription .subs-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subscription input[type="email"] {
+    border-radius: 5px;
+    border: 1px solid white;   
+    margin: 20px; 
+    font-size: 15px;
+}
+
+.subscription input[type="submit"] {
+    border-radius: 5px;
+    background-color: hsl(188, 40%, 4%);
+    color: #FAF7F0; 
+    border: none;
+    font-size: 17px;
+    width: 100px;
+    margin: auto;
+    transition: transform 0.5s;
+}
+
+.subscription input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #FAF7F0;
+    border: 1px solid hsl(188, 40%, 4%);
+    color: hsl(188, 40%, 4%);
+    transform: scale(1.1);
+}
+
+
+/* Features */
+.features {
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    max-width: 250px;
+    justify-content: center;
+    align-items: center;
+}
+
+.features .row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.features .row .icon {
+    color: hsl(188, 40%, 4%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    height: 100px;
+}
+
+
+.features .row .info {
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+
+.features .row .info p {
+    font-size: 0.6em;
+    
+}
+/* How It Works */
+
+.video {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 375px;
+}
+
+.video iframe {
+    width: 350px;
+     height: 155px;
+     margin-bottom: 30px;   
+}
+
+/*Pricing*/
+
+.pricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.pricing .class-title {
+    background-color: #9aad9b;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.pricing ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.pricing .katana,
+.pricing .wakizashi,
+.pricing .tanto{
+    text-align: center;
+    width: 300px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.pricing button {
+    border-radius: 5px;
+    background-color: hsl(188, 40%, 4%);
+    color: #FAF7F0; 
+    border: none;
+    font-size: 17px;
+    width: 100px;
+    margin-bottom: 10px;
+    transition: transform 0.5s;
+}
+
+.pricing button:hover {
+    cursor: pointer;
+    background-color: #FAF7F0;
+    border: 1px solid hsl(188, 40%, 4%);
+    color: hsl(188, 40%, 4%);
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    font-size: 0.8em;
+    background-color: #9aad9b;
+    color: white;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+footer ul li {
+    margin-right: 30px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Media Queries*/
+
+@media (min-width: 769px) {
+    header .burger-menu {
+        display: none;
+    }
+
+    nav ul {
+        display:flex;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        margin: 80px auto;
+        max-width: 700px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .features .row {
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .features .row .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+        height: 100px;
+        width: 20vw;
+    }
+    
+    .features .row .info {
+        display: flex;
+        flex-direction: column;
+        height: 125px;
+        width: 50vw;
+        text-align: left;
+        margin-right: 40px;
+    }
+
+    .features .row .info p{
+        font-size: 1em;
+        }
+
+        /* How It Works */
+
+    .video {
+        width: 700px;
+    }
+
+    .video iframe {
+        width: 560px;
+        height: 315px;
+        
+    }
+
+    /*Pricing*/
+
+    .pricing {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .pricing .katana,
+    .pricing .wakizashi,
+    .pricing .tanto{
+        margin-right: 30px;
+}
+
+    /* Footer */
+
+    footer {
+        width: 800px;
+        align-items: flex-end;
+        font-size: 0.9em;
+    }
+
+    footer ul {
+        margin: 5px;
+        font-weight: 700;
+    }
+
+    footer p {
+        margin-right: 30px;
+        font-size: 0.8em;
+    }
+
+}
+
+
+   
